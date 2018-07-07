@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.senai.colabtrack.fragment.MonitoradoStatusFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+
+    <!-- FAB -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_cadastro_monitorado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/activity_padding"
+        android:layout_marginRight="@dimen/activity_padding"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@color/white" />
+
+</FrameLayout>

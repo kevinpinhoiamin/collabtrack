@@ -1,0 +1,25 @@
+version: "3.0"
+services:
+  database:
+    image: mariadb
+    environment:
+      - MYSQL_DATABASE=collabtrack
+      - MYSQL_USER=collabtrack
+      - MYSQL_PASSWORD=wUWTYqGbIJSgAJFWAwKQ
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    volumes:
+      - /dados/development/mysql_volume:/var/lib/mysql
+      
+  application:
+    image: kevinpinhoiamin/collabtrack-application
+    volumes:
+      - /dados/development/uploads:/collabtrack/_uploads
+    depends_on:
+      - database
+
+  nginx:
+    image: kevinpinhoiamin/collabtrack-nginx
+    ports:
+      - 80:80
+    depends_on:
+      - application

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view_status"
+    android:layout_marginTop="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    tools:cardCornerRadius="2dp"
+    tools:cardElevation="6dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Borda do CardView -->
+    <FrameLayout
+        android:id="@+id/borda_monitorado"
+        android:layout_width="4dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding">
+
+        <TextView
+            android:id="@+id/nome_monitorado"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:id="@+id/borda_superior"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/nome_monitorado" />
+
+        <LinearLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_alignLeft="@id/borda_superior"
+            android:layout_below="@id/borda_superior">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_view_bateria"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/text_view_bateria"
+                    style="@style/Base.TextAppearance.AppCompat.Body2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_view_bateria"
+                    android:text="@string/bateria" />
+
+                <TextView
+                    android:id="@+id/bateria_status"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_bateria"
+                    android:layout_toRightOf="@id/image_view_bateria" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_view_conexao"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/text_view_conexao"
+                    style="@style/Base.TextAppearance.AppCompat.Body2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_view_conexao"
+                    android:text="@string/conexao" />
+
+                <TextView
+                    android:id="@+id/conexao_status"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_conexao"
+                    android:layout_toRightOf="@id/image_view_conexao" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_view_localizacao"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/text_view_localizacao"
+                    style="@style/Base.TextAppearance.AppCompat.Body2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_view_localizacao"
+                    android:text="@string/localizacao" />
+
+                <TextView
+                    android:id="@+id/localizacao_status"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_localizacao"
+                    android:layout_toRightOf="@id/image_view_localizacao" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/borda_central"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@id/layout_status" />
+
+        <ImageView
+            android:id="@+id/image_view_monitoramento"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/borda_central"/>
+
+        <TextView
+            android:id="@+id/text_view_monitoramento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_view_monitoramento"
+            android:layout_alignBottom="@id/image_view_monitoramento" />
+
+        <TextView
+            android:id="@+id/tipo_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/borda_central"
+            android:layout_alignParentRight="true" />
+
+        <FrameLayout
+            android:id="@+id/borda_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@id/image_view_monitoramento" />
+
+        <TextView
+            android:id="@+id/data_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/borda_inferior" />
+
+        <TextView
+            android:id="@+id/ativo_inativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/borda_inferior"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

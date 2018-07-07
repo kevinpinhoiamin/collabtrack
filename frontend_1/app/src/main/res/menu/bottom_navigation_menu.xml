@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Mapa -->
+    <item
+        android:id="@+id/nav_item_mapa"
+        android:icon="@drawable/ic_map"
+        android:checked="true"
+        android:title="@string/mapa" />
+
+    <!-- Chat -->
+    <item
+        android:id="@+id/nav_item_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat" />
+
+    <!-- Status -->
+    <item
+        android:id="@+id/nav_item_status"
+        android:icon="@drawable/ic_happy_face"
+        android:title="@string/monitorado" />
+
+    <!-- Perfil -->
+    <item
+        android:id="@+id/nav_item_perfil"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/perfil" />
+
+</menu>

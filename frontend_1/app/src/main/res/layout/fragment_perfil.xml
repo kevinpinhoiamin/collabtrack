@@ -1,0 +1,278 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="br.com.senai.colabtrack.fragment.ConfiguracoesFragment">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            tools:cardCornerRadius="2dp"
+            tools:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seus_dados" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_input_layout_nome"
+                    android:layout_marginTop="@dimen/form_control">
+
+                    <EditText
+                        android:id="@+id/edit_text_nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="60"
+                        android:hint="@string/nome" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_input_layout_celular"
+                    android:layout_marginTop="@dimen/form_control">
+
+                    <EditText
+                        android:id="@+id/edit_text_celular"
+                        android:layout_width="match_parent"
+                        android:inputType="phone"
+                        android:layout_height="wrap_content"
+                        android:maxLength="15"
+                        android:hint="@string/celular" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            tools:cardCornerRadius="2dp"
+            tools:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seu_token" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_control"
+                    android:id="@+id/text_input_layout_token">
+
+                    <EditText
+                        android:id="@+id/edit_text_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/token"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            tools:cardCornerRadius="2dp"
+            tools:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sua_foto" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp">
+
+                    <ImageView
+                        android:id="@+id/image_view_monitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="@dimen/form_control" />
+
+                    <View
+                        android:id="@+id/view_image_view_monitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_control"
+                        android:background="@color/transparent_grey"
+                        android:minHeight="300dp"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_image_view_monitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"  />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <Button
+                android:id="@+id/button_resincronizar_dados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="@string/resincronizar_dados" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_button_resincronizar_dados"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_sair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/closeIconColor"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/sair" />
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false"
+            tools:cardCornerRadius="2dp"
+            tools:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_control"
+                android:layout_marginBottom="@dimen/form_control"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/naipe"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/logo"
+                        android:layout_marginRight="@dimen/activity_padding" />
+
+                    <ImageView
+                        android:id="@+id/collabtrack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_toRightOf="@id/naipe"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_padding" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_control"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="@string/app_name" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:text="@string/app_version" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

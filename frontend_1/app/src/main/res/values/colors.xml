@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorPrimary500</color>
+    <color name="colorPrimaryDark">@color/colorPrimary700</color>
+    <color name="colorAccent">#448AFF</color>
+
+    <color name="colorPrimary50">#E1F5FE</color>
+    <color name="colorPrimary100">#B3E5FC</color>
+    <color name="colorPrimary200">#81D4FA</color>
+    <color name="colorPrimary300">#4FC3F7</color>
+    <color name="colorPrimary400">#29B6F6</color>
+    <color name="colorPrimary500">#03A9F4</color>
+    <color name="colorPrimary600">#039BE5</color>
+    <color name="colorPrimary700">#0288D1</color>
+    <color name="colorPrimary800">#0277BD</color>
+    <color name="colorPrimary900">#01579B</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="transparent_grey">#999E9E9E</color>
+    <color name="light_grey">#F2F2F2</color>
+    <color name="control_highlight">#B3E5FC</color>
+    <color name="red">@color/closeIconColor</color>
+
+    <color name="mapIconColor">#4888F4</color>
+    <color name="chatIconColor">#20A464</color>
+    <color name="statusIconColor">#FFDE47</color>
+    <color name="configIconColor">@color/black</color>
+    <color name="closeIconColor">#DC483C</color>
+
+    <color name="colorPickerDefaultColor">#2062AF</color>
+    <color name="colorPickerDefaultBorderColor">#58AEB7</color>
+
+    <color name="inactiveColor">#E0E0E0</color>
+    <color name="activeColor">#FFFFFF</color>
+
+    <color name="randomColor1">#F44336</color>
+    <color name="randomColor2">#E91E63</color>
+    <color name="randomColor3">#9C27B0</color>
+    <color name="randomColor4">#673AB7</color>
+    <color name="randomColor5">#3F51B5</color>
+    <color name="randomColor6">#2196F3</color>
+    <color name="randomColor7">#03A9F4</color>
+    <color name="randomColor8">#00BCD4</color>
+    <color name="randomColor9">#009688</color>
+    <color name="randomColor10">#4CAF50</color>
+    <color name="randomColor11">#8BC34A</color>
+    <color name="randomColor12">#CDDC39</color>
+    <color name="randomColor13">#FFEB3B</color>
+    <color name="randomColor14">#FFC107</color>
+    <color name="randomColor15">#FF9800</color>
+    <color name="randomColor16">#FF5722</color>
+    <color name="randomColor17">#795548</color>
+    <color name="randomColor18">#9E9E9E</color>
+    <color name="randomColor19">#607D8B</color>
+
+    <color name="logoTextColor">#404042</color>
+</resources>

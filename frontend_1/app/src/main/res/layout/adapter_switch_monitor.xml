@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/nome_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/switch_monitor" />
+
+    <Switch
+        android:id="@+id/switch_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/borda_monitor_desabilitado"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/borda_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_alignBottom="@+id/nome_monitor" />
+
+</RelativeLayout>

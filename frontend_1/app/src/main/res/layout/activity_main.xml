@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.senai.colabtrack.activity.MainActivity">
+
+    <!-- Toolbar -->
+    <include layout="@layout/include_toolbar" />
+
+    <!-- Frame que irá carregar os conteúdos da tela -->
+    <FrameLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:background="?android:attr/windowBackground"
+        style="@style/AppTheme.BottomNavigation"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>

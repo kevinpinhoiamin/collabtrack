@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Filtrar localizações -->
+    <item android:id="@+id/nav_item_filtrar"
+        android:title="@string/filtrar_localizacoes"
+        android:icon="@drawable/ic_search_locaion"
+        app:showAsAction="always" />
+
+    <!-- Áreas seguras -->
+    <item
+        android:id="@+id/nav_item_areas_seguras"
+        android:icon="@drawable/ic_more_vert"
+        app:showAsAction="always"
+        android:title="@string/areas_seguras" />
+
+</menu>

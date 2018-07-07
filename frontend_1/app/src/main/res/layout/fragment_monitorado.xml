@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_padding">
+
+        <TextView
+            android:id="@+id/text_view_disclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/disclaimer_monitor_principal"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_input_layout_nome"
+            android:layout_marginTop="@dimen/form_control">
+
+            <EditText
+                android:id="@+id/edit_text_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome"
+                android:maxLength="60" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_input_layout_celular"
+            android:layout_marginTop="@dimen/form_control">
+
+            <EditText
+                android:id="@+id/edit_text_celular"
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:layout_height="wrap_content"
+                android:maxLength="15"
+                android:hint="@string/celular" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_control"
+            android:textColor="@color/grey"
+            android:text="@string/cor" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/color_picker_control">
+
+            <ImageView
+                android:id="@+id/image_view_cor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/color_picker_height" />
+
+            <ImageView
+                android:id="@+id/image_view_cor_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/color_picker_height"
+                android:background="@color/transparent_grey"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner_monitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/monitor_principal"
+            android:layout_marginTop="@dimen/form_control"
+            app:met_floatingLabel="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_control"
+            android:text="@string/monitores_secundarios" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_monitorados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_control">
+
+            <Button
+                android:id="@+id/button_cadastrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:foreground="?attr/selectableItemBackground"
+                android:enabled="false"
+                android:text="@string/cadastrar" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_button_cadastrar"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/black"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
