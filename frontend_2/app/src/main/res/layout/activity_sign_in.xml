@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".br.senai.collabtrack.client.activity.SignInActivity">
+    android:orientation="vertical"
+    android:background="@drawable/bg_primary_color_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_layout_celular"
+                android:layout_marginTop="@dimen/form_control">
+
+                <EditText
+                    android:id="@+id/edit_text_celular"
+                    android:layout_width="match_parent"
+                    android:inputType="phone"
+                    android:backgroundTint="@color/white"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/celular_monitorado" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_layout_token"
+                android:layout_marginTop="@dimen/form_control">
+
+                <EditText
+                    android:id="@+id/edit_text_token"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_height="wrap_content"
+                    android:maxLength="6"
+                    android:hint="@string/token_monitor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_control">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_button_entrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_entrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_border"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textColor="@color/white"
+                    android:text="@string/entrar" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

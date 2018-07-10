@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.senai.colabtrack">
+    package="br.senai.collabtrack">
 
     <!-- Acessar a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -24,7 +24,7 @@
         android:required="false" />
 
     <application
-        android:name=".ColabTrackApplication"
+        android:name="br.senai.collabtrack.CollabtrackApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,12 +54,12 @@
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="br.senai.collabtrack.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name="br.senai.collabtrack.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -76,7 +76,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activity.HomeActivity"
+            android:name="br.senai.collabtrack.activity.HomeActivity"
             android:theme="@style/HomeTheme"
             android:windowSoftInputMode="stateUnchanged">
             <intent-filter>
@@ -86,20 +86,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SignInActivity"
+            android:name="br.senai.collabtrack.activity.SignInActivity"
             android:theme="@style/HomeTheme" />
         <activity
-            android:name=".activity.SignUpActivity"
+            android:name="br.senai.collabtrack.activity.SignUpActivity"
             android:theme="@style/HomeTheme" />
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.AreasSegurasActivity">
+        <activity android:name="br.senai.collabtrack.activity.MainActivity" />
+        <activity android:name="br.senai.collabtrack.activity.AreasSegurasActivity">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".activity.AreaSeguraActivity" />
-        <activity android:name=".activity.ChatActivity" />
-        <activity android:name=".activity.MonitoradoActivity"></activity>
+        <activity android:name="br.senai.collabtrack.activity.AreaSeguraActivity" />
+        <activity android:name="br.senai.collabtrack.activity.ChatActivity" />
+        <activity android:name="br.senai.collabtrack.activity.MonitoradoActivity"></activity>
     </application>
 
 </manifest>

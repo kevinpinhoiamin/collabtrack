@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.senai.colabtrack.activity.SignUpActivity"
+    tools:context="br.senai.collabtrack.activity.SignUpActivity"
     android:orientation="vertical"
     android:background="@drawable/bg_primary_color_gradient">
 

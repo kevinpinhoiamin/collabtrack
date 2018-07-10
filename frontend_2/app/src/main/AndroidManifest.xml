@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.senai.collabtrack.client">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- Efetuar ligações -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- -Obter o número do celular -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Inicialização automática -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Ultilização da internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Acessar o cartão de memória -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- Registrar aplicação para obter o id -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Acompanhar a mudança de status da internet -->
+    <application
+        android:name="br.senai.collabtrack.client.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Collabtrack Client"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="br.senai.collabtrack.client.activity.SignInActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="br.senai.collabtrack.client.activity.VoiceActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="br.senai.collabtrack.client.activity.VoiceActionActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="br.senai.collabtrack.client.activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.senai.collabtrack.client.activity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <receiver android:name="br.senai.collabtrack.client.broadcast.AppAutoBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.senai.collabtrack.client.broadcast.NetworkStateReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="br.senai.collabtrack.client.services.LocationService"/>
+        <service android:name="br.senai.collabtrack.client.broadcast.BatteryStatusReceiver" />
+        <service android:name="br.senai.collabtrack.client.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="br.senai.collabtrack.client.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="br.senai.collabtrack.client.broadcast.BroadcastReceiverActivity">
+            <intent-filter>
+                <action android:name="call.broadcastReceiverActivity" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

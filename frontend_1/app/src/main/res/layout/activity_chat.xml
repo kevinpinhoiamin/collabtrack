@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/light_grey"
-    tools:context="br.com.senai.colabtrack.activity.ChatActivity">
+    tools:context="br.senai.collabtrack.activity.ChatActivity">
 
     <include layout="@layout/include_toolbar" />
 

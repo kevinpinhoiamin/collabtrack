@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.senai.colabtrack.activity.AreasSegurasActivity">
+    tools:context="br.senai.collabtrack.activity.AreasSegurasActivity">
 
     <!-- Toolbar -->
     <include layout="@layout/include_toolbar" />

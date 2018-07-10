@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="br.com.senai.colabtrack.fragment.dialog.FiltrarLocalizacoesDialogFragment">
+        tools:context="br.senai.collabtrack.fragment.dialog.FiltrarLocalizacoesDialogFragment">
 
             <TextView
                 android:id="@+id/text_view_monitor_monitorados"
