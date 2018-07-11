@@ -21,7 +21,7 @@ public class Application extends android.app.Application{
 
     /******************************GLOBALS CONFIGURATIONS*******************************/
 
-    public static final String SERVER_URL = "http://54.207.111.104/collabtrack";
+    public static final String SERVER_URL = "http://2b49580a.ngrok.io/collabtrack";
 
     public static final String API_USER = "collabtrack";
     public static final String API_PASSWORD = "NEiVyMFkeTCVHqHJIMyfGiAiRz4IvymaCnmdimi8";
@@ -31,7 +31,7 @@ public class Application extends android.app.Application{
 
     /*******************************END GLOBALS CONFIGURATIONS*******************************/
 
-    private static final boolean showLogActivity = false;//Ativar para visualizar o log em campo; quando o app já estiver logado.
+    private static final boolean showLogActivity = true;//Ativar para visualizar o log em campo; quando o app já estiver logado.
 
     public static String TAG = "log";
 

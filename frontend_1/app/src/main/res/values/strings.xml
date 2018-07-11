@@ -43,7 +43,7 @@
     <string name="inativar">Inativar</string>
     <string name="ativando_area_segura">Ativando área segura</string>
     <string name="inativando_area_segura">Inativando área segura</string>
-    <string name="resincronizar_dados">Resincronizar dados</string>
+    <string name="resincronizar_dados">Sincronizar dados</string>
     <string name="excluir_area_segura">Excluir área segura?</string>
     <string name="nao">Não</string>
     <string name="sim">Sim</string>
