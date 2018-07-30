@@ -68,6 +68,11 @@ public class MonitoradoStatusAdapter extends RecyclerView.Adapter<MonitoradoStat
             holder.data.setTextColor(ContextCompat.getColor(context, R.color.red));
         }
 
+        status.setBateria(686);
+        status.setWifi(false);
+        status.setInternetMovel(true);
+        status.setLocalizacao(true);
+
         holder.bateriaStatus.setText(status.getBateria()+"%");
         int ic_battery = R.drawable.ic_battery_full;
         if(status.getBateria() <= 0){

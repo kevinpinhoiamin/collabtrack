@@ -252,6 +252,8 @@ public class PerfilFragment extends BaseFragment {
      */
     private Runnable alterarDadosMonitor(){
 
+        monitorService = new MonitorService(getContext());
+
         return new Runnable() {
             @Override
             public void run() {
@@ -390,7 +392,7 @@ public class PerfilFragment extends BaseFragment {
      * Método responsável por salvar o monitors
      */
     private void salvarMonitor(){
-        MonitorService monitorService = new MonitorService(getContext());
+        monitorService = new MonitorService(getContext());
         monitorService.save(monitor);
     }
 
