@@ -21,7 +21,7 @@ public class Application extends android.app.Application{
 
     /******************************GLOBALS CONFIGURATIONS*******************************/
 
-    public static final String SERVER_URL = "http://2fd4427f.ngrok.io/collabtrack";
+    public static final String SERVER_URL = "http://fa6b4dc8.ngrok.io/collabtrack";
 
     public static final String API_USER = "collabtrack";
     public static final String API_PASSWORD = "NEiVyMFkeTCVHqHJIMyfGiAiRz4IvymaCnmdimi8";

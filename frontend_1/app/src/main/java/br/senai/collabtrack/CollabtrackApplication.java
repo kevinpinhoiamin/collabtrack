@@ -27,7 +27,7 @@ public class CollabtrackApplication extends Application{
 
     // API
     public static final boolean DEVELOPMENT_MODE = true;
-    private static final String DOMAIN = DEVELOPMENT_MODE ? "http://2fd4427f.ngrok.io" : "http://54.207.111.104";
+    private static final String DOMAIN = DEVELOPMENT_MODE ? "http://90e16910.ngrok.io" : "http://54.207.111.104";
     private static final String API_PATH = DOMAIN + "/collabtrack/";
     public static final String API_USER = "collabtrack";
     public static final String API_PASSWORD = "NEiVyMFkeTCVHqHJIMyfGiAiRz4IvymaCnmdimi8";
