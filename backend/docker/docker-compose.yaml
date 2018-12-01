@@ -1,4 +1,5 @@
-version: "3.0"
+version: "3"
+
 services:
   database:
     image: mariadb
@@ -8,12 +9,12 @@ services:
       - MYSQL_PASSWORD=wUWTYqGbIJSgAJFWAwKQ
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
     volumes:
-      - /dados/development/mysql_volume:/var/lib/mysql
+      - /home/kevin/development/collabtrack/mysql_volume:/var/lib/mysql
       
   application:
     image: kevinpinhoiamin/collabtrack-application
     volumes:
-      - /dados/development/uploads:/collabtrack/_uploads
+      - /home/kevin/development/collabtrack/uploads:/collabtrack/_uploads
     depends_on:
       - database
 
@@ -23,3 +24,22 @@ services:
       - 80:80
     depends_on:
       - application
+
+  nginx-test:
+    image: nginx
+    ports:
+      - 81:80
+    depends_on:
+      - application
+    volumes:
+      - /home/kevin/development/collabtrack/test:/usr/share/nginx/html
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: database
+    depends_on:
+      - database

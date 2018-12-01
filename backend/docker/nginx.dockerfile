@@ -5,6 +5,6 @@ RUN apk add --update apache2-utils \
 	&& htpasswd -cbB /etc/nginx/.htpasswd collabtrack NEiVyMFkeTCVHqHJIMyfGiAiRz4IvymaCnmdimi8
 
 WORKDIR /etc/nginx/conf.d
-COPY nginx.conf collabtrack.conf
+COPY nginx.conf default.conf
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
